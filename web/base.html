@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arqueologia</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <link rel="stylesheet" href="/css/style.css" />
+</head>
+
+<body>
+    <div class="header">
+        <div class="logo">
+            <a href="../web/index.html">
+                <img class="ut" src="../img/logout.png" alt="Logo de la Universidad de Cancún" />
+            </a>
+        </div>
+        <div class="titulo">
+            <h1>
+                <script>document.write(localStorage.getItem('titulo'));</script>
+            </h1>
+        </div>
+    </div>
+
+    <div class="content-container">
+        <img src="<script>document.write(localStorage.getItem('imagenSrc'));</script>" alt="" class="image"
+            id="imagePlaceholder">
+        <div class="text-container">
+            <p>
+                <script>document.write(localStorage.getItem('des'));</script>
+            </p>
+        </div>
+    </div>
+
+        <script src="../js/javascript.js"></script>
+</body>
+
+<footer class="footers">
+    <p>&copy; 2023 Gonzalez Olivares Luis Daniel</p>
+</footer>
+
+</html>
