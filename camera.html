@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/dev/aframe/build/aframe-ar.js"></script>
+    <body style="margin: 0px; overflow: hidden;">
+        <a-scene embedded arjs>
+            <!-- Escena 1: Pirámide -->
+            <a-marker type="pattern" url="3d/pattern-ch1.patt">
+                <a-entity gltf-model="3d/chichen.glb" scale="1 1 1" position="0 1 0" rotation="-90 90 -90"></a-entity>
+            </a-marker>
+            <!-- Escena 2: labna -->
+            <a-marker type="pattern" url="3d/pattern-labna.patt">
+                <a-entity gltf-model="3d/Labna.glb" scale="7 7 7" position="0 0 0" rotation="-90 90 -90"></a-entity>
+            </a-marker>
+            <!-- Escena 3 Xcaret -->
+            <a-marker type="pattern" url="3d/pattern-xcaret.patt">
+                <a-entity gltf-model="3d/xcaret.glb" scale="4 4 4" position="0 1 0" rotation="-90 90 -90"></a-entity>
+            </a-marker>
+            <!-- Escena 4: coba -->
+            <a-marker type="pattern" url="3d/pattern-coba.patt">
+                <a-entity gltf-model="3d/coba.glb" scale="2 2 2" position="0 0 0" rotation="-90 90 -90"></a-entity>
+            </a-marker>
+            <!-- Escena 5: dxibanche -->
+            <a-marker type="pattern" url="3d/pattern-dxibanché.patt">
+                <a-entity gltf-model="3d/Dxibanche.glb" scale="7 7 7" position="-5 0 0" rotation="-90 90 -90"></a-entity>
+            </a-marker>
+            <!-- Escena 6: dzibilchaltun -->
+            <a-marker type="pattern" url="3d/pattern-dzibilchaltun.patt">
+                <a-entity gltf-model="3d/dzibilchaltun.glb" scale="0.5 0.5 0.5" position="0 -10 0" rotation="-90 90 -90"></a-entity>
+            </a-marker>
+            <!-- Escena 7: Uxmal -->
+            <a-marker type="pattern" url="3d/pattern-uxmal.patt">
+                <a-entity gltf-model="3d/uxmal.glb" scale="0.2 0.2 0.2" position="0 -10 0" rotation="-90 90 -90"></a-entity>
+            </a-marker>
+            <a-entity camera></a-entity>
+        </a-scene>
+    </body>
+</html>
+
+

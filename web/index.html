@@ -7,23 +7,20 @@
     <title>Arqueologia</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
     <link rel="stylesheet" href="/css/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
-
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
     <div class="header">
-        <div class="logo">
+        <a href="../web/index.html" class="logo">
             <img class="ut" src="../img/logout.png" alt="Logo de la Universidad de Cancún" />
-        </div>
+        </a>
         <div class="titulo">
             <h1>Arqueo Mexico</h1>
         </div>
     </div>
+    
     
     <div class="content-container">
         <div class="imagen-container">
@@ -34,7 +31,11 @@
             <p>Una zona arqueológica en la península de Yucatán es un sitio histórico y cultural que alberga vestigios y
                 estructuras antiguas construidas por civilizaciones precolombinas, principalmente las civilizaciones
                 mayas. Estas áreas arqueológicas son testigos de la rica historia y el impresionante legado de las
-                antiguas civilizaciones mayas en la región.</p>
+                antiguas civilizaciones mayas en la región.
+            <br>
+            <br>
+            Cada zona arqueológica cuenta su propia historia, con arquitectura única que refleja la avanzada ingeniería y habilidades de construcción de los mayas.
+            </p>
         </div>
     </div>
 
@@ -45,41 +46,40 @@
             <div class="swiper-slide" id="chichen-details">
                 <img src="/img/chichenitza.png" alt="" class="zonaimg">
                 <h3>Chichen Itzá</h3>
-                <button class="buton" onclick="redirectToDetails('chichen-details')">Ver detalles</button>
+                <button class="buton" onclick="redireccionar('chichen-details')">Ver detalles</button>
             </div>
             <div class="swiper-slide" id="labna-details">
                 <img src="/img/labna.jpg" alt="" class="zonaimg">
                 <h3>Labná</h3>
-                <button class="buton" onclick="redirectToDetails('labna-details')">Ver detalles</button>
+                <button class="buton" onclick="redireccionar('labna-details')">Ver detalles</button>
             </div>
             <div class="swiper-slide" id="xcaret-details">
                 <img src="/img/xcaret.png" alt="" class="zonaimg">
                 <h3>Xcaret</h3>
-                <button class="buton" onclick="redirectToDetails('xcaret-details')">Ver detalles</button>
+                <button class="buton" onclick="redireccionar('xcaret-details')">Ver detalles</button>
             </div>
             <div class="swiper-slide" id="coba-details">
                 <img src="/img/coba.webp" alt="" class="zonaimg">
                 <h3>Cobá</h3>
-                <button class="buton" onclick="redirectToDetails('coba-details')">Ver detalles</button>
+                <button class="buton" onclick="redireccionar('coba-details')">Ver detalles</button>
             </div>
             <div class="swiper-slide" id="dxibanche-details">
                 <img src="/img/dxibanché.jpg" alt="" class="zonaimg">
                 <h3>Dxibanché</h3>
-                <button class="buton" onclick="redirectToDetails('dxibanche-details')">Ver detalles</button>
+                <button class="buton" onclick="redireccionar('dxibanche-details')">Ver detalles</button>
             </div>
             <div class="swiper-slide" id="dzibilchaltun-details">
                 <img src="/img/dzibilchaltún.jpg" alt="" class="zonaimg">
                 <h3>Dzibilchaltún</h3>
-                <button class="buton" onclick="redirectToDetails('dzibilchaltun-details')">Ver detalles</button>
+                <button class="buton" onclick="redireccionar('dzibilchaltun-details')">Ver detalles</button>
             </div>
             <div class="swiper-slide" id="uxmal-details">
                 <img src="/img/uxmal.jpg" alt="" class="zonaimg">
                 <h3>Uxmal</h3>
-                <button class="buton"  onclick="redirectToDetails('uxmal-details')">Ver detalles</button>
+                <button class="buton"  onclick="redireccionar('uxmal-details')">Ver detalles</button>
             </div>
         </div>
     </div>
-    <script type="module" src="https://unpkg.com/@google/model-viewer@2.0.0/dist/model-viewer.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="../js/javascript.js"></script>
 

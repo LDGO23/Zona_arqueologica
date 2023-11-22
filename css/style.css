@@ -12,30 +12,32 @@ body {
 .header {
     background-color: #00ab84;
     display: flex;
-    align-items: center; /* Centra verticalmente */
-    justify-content: space-between; /* Distribuye los elementos a los extremos */
-    height: 100px; /* Establece la altura del header */
-    padding: 0 20px; /* Añade espacio alrededor de los elementos */
+    align-items: center; 
+    justify-content: space-between; 
+    height: 100px;
+    padding: 0 20px;
 }
 
 .titulo {
     font-family: 'Roboto', sans-serif;
     color: #ffffff;
-    text-align: center; /* Centra el texto horizontalmente */
-    flex-grow: 1; /* Ocupa el espacio restante */
+    text-align: center; 
+    flex-grow: 1;
 }
 
 .logo {
+    padding: 1%;
     width: 100px;
     height: 90px;
+    display: flex;
+    align-items: center; 
 }
-
 
 .ut {
-    padding: 15%;
-    width: 150px;
+    width: 150%;
     height: auto;
 }
+
 
 /* Princial */
 .content-container {
@@ -45,25 +47,24 @@ body {
     align-items: center;
     margin: 50px;
 }
-/* Estilos para el contenedor de texto */
 .text-container {
     font-family: 'Roboto', sans-serif;
     width: 50%;
-    /* Ancho máximo del contenedor de texto (ajustable) */
-    padding: 40px;
+    padding: 50px;
     text-align: justify;
-    /* Espaciado interno */
     background-color: #f0f0f0;
-    /* Color de fondo del cuadro de texto */
+}
+h1 {
+    text-align: center; 
 }
 .imagen-container {
     margin-left: 10px;
+    width: 60%;
 }
 
-/* Estilos para la imagen principal*/
 .image {
-    flex: 1; /* Ocupa menos espacio */
-    width: 100%; /* Establece un ancho máximo para la imagen */
+    flex: 1; 
+    width: 100%; 
     margin-left: 10px;
 }
 
@@ -91,7 +92,6 @@ body {
 }
 
 
-/* Estilos para el carrusel */
 .carousel {
     perspective: 120px;
     width: 300px;
@@ -112,12 +112,9 @@ body {
 .zonaimg {
     padding: 10%;
     width: 80%;
-    /* Ajusta el tamaño máximo de la imagen */
     height: 80%;
-    /* Ajusta la altura automáticamente */
     object-fit: cover;
     border-radius: 50px;
-    /* Bordes redondeados */
 }
 
 /* Pie de pagina */
@@ -130,18 +127,8 @@ body {
     color: #ffffff;
 }
 
-.footers {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: #00ab84;
-    text-align: center;
-    padding: 10px 0;
-    font-size: 14px;
-    color: #ffffff;
-}
 
+/* Ver detalles buton*/
 .buton {
     --green: #1BFD9C;
     font-size: 15px;
@@ -179,37 +166,234 @@ body {
     transform: translateX(15em);
 }
 
-/* Estilo de las divisiones personalizadas */
+/* Estilo de las divisiones de introduccion y zonas arqueologicas*/
 .custom-divider {
-    height: 2px; /* Altura de la línea horizontal */
-    width: 75%; /* Anchura de la línea (ajustable según tus necesidades) */
-    background-color: #333; /* Color de la línea */
-    margin: 10px auto; /* Margen para centrar la línea horizontal */
+    height: 2px; 
+    width: 75%;
+    background-color: #333;
+    margin: 10px auto;
 }
 
 /* Estilos para dispositivos móviles */
 @media (max-width: 768px) {
     .content-container {
-        flex-direction: column; /* Cambiar a disposición de columna en dispositivos móviles */
-        text-align: center; /* Centrar el texto en dispositivos móviles */
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        text-align: center;
     }
 
-    .text-container {
-        width: 100%; /* Ancho completo en dispositivos móviles */
-        padding: 20px; /* Espaciado interno en dispositivos móviles */
+    .text-container, .imagen-container {
+        width: 100%; 
+        padding: 20px;
+        box-sizing: border-box;
     }
 
     .imagen-container {
-        margin-top: 20px; /* Margen superior en dispositivos móviles */
+        margin-top: 20px;
+        order: 1; 
     }
 
-    .image {
-        width: 100%; /* Ancho completo en dispositivos móviles */
-        height: auto; /* Ajustar automáticamente la altura en dispositivos móviles */
-    }
+
 
     .swiper-slide {
-        width: 80%; /* Ancho del slide en dispositivos móviles */
-        margin: 0 auto; /* Centrar el slide en dispositivos móviles */
+        width: 80%;
+        margin: 0 auto;
+    }
+    h1 {
+        text-align: center;
+    }
+}
+
+.descripcion-container {
+    padding: 1%;
+    display: flex;
+    align-items: center;
+    margin: 10px;
+}
+
+.text-container {
+    width: 50px;
+    flex: 1; 
+}
+
+.text-container {
+    width: 50%; 
+    margin: 0 auto; 
+}
+
+
+@media (max-width: 767px) {
+    .text-container {
+        width: 100%; 
+        padding: 10px; 
+    }
+}
+
+@media (min-width: 768px) {
+
+}
+
+
+@media (min-width: 1024px) {
+
+}
+
+#qrcode {
+    padding: 5%;
+    width: 128px; 
+    height: 128px; 
+    margin-right: 20px;
+}
+
+.hiro-container {
+    display: flex;
+    align-items: center; 
+}
+
+.hiro {
+    align-items: center;
+    width: 150px;
+    height: auto;
+}
+
+/* Estilo para las imágenes 'ig' y 'ubi' */
+.ig,
+.ubi {
+    max-width: 100%;
+    height: auto; 
+    display: block; 
+    margin: 0 auto;
+    max-height: 250px; 
+    margin-bottom: 40px; 
+}
+
+
+.zna {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 20px; 
+    text-align: center;
+}
+
+.zna h2 {
+    margin: 0; 
+}
+
+.ig-container {
+    text-align: center; 
+}
+
+
+.ubi-container {
+    text-align: center; 
+}
+
+
+.titulos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    font-family: 'Roboto', sans-serif; 
+    margin-top: 10px;
+    margin-bottom: 20px; 
+}
+
+/* Estilo para el contenedor principal 'intro' */
+.intro {
+    padding: 2%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px; 
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.desc {
+    text-align: center;
+    grid-column: 1 / 1; 
+}
+
+.aume{
+    text-align:center;
+    grid-column: 2 / 2;
+}
+/* Estilo para el contenedor principal 'descripcion-container' */
+.descripcion-container {
+    font-family: 'Roboto', sans-serif;
+    text-align: justify;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.desc-container {
+    background-color: #f0f0f0;
+    flex: 1; 
+    padding: 3%;
+    text-align: justify; 
+}
+
+.realidad {
+    flex: 1; 
+    padding: 3%; 
+    text-align: center; 
+    display: flex; 
+    justify-content: space-around; 
+    align-items: center; 
+}
+
+#qrcode {
+    margin: 0 2px; 
+}
+
+
+.hiro-container {
+    display: flex; 
+    align-items: center; 
+    margin: 0 px; 
+}
+
+@media (max-width: 768px) {
+    .header {
+        text-align: center;
+    }
+
+    .logo {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .titulo h1 {
+        font-size: 24px;
+    }
+
+    .descripcion-container {
+        display: flex;
+        flex-direction: column-reverse; 
+        align-items: center; 
+    }
+    .realidad {
+        margin-top: 20px;
+    }
+}
+
+/* CSS for small screens (e.g., mobile devices) */
+@media (max-width: 768px) {
+    .header {
+        text-align: center;
+    }
+    
+    .logo {
+        display: block;
+        margin: 10px auto; /* Add margin to separate the logo from the text */
+    }
+
+    .titulo h1 {
+        font-size: 24px;
+        margin-top: 10px; /* Add margin to separate the title from the logo */
     }
 }

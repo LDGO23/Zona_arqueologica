@@ -7,15 +7,17 @@
     <title>Arqueologia</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
     <link rel="stylesheet" href="/css/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/qrcode-generator/qrcode.min.js"></script>
 </head>
 
 <body>
+
     <div class="header">
-        <div class="logo">
-            <a href="../web/index.html">
-                <img class="ut" src="../img/logout.png" alt="Logo de la Universidad de Cancún" />
-            </a>
-        </div>
+        <a href="../web/index.html" class="logo">
+            <img class="ut" src="../img/logout.png" alt="Logo de la Universidad de Cancún" />
+        </a>
         <div class="titulo">
             <h1>
                 <script>document.write(localStorage.getItem('titulo'));</script>
@@ -23,20 +25,80 @@
         </div>
     </div>
 
-    <div class="content-container">
-        <img src="<script>document.write(localStorage.getItem('imagenSrc'));</script>" alt="" class="image"
-            id="imagePlaceholder">
-        <div class="text-container">
+    <div class="intro">
+        <div class="desc">
+            <h2>Descripcion </h2>
+        </div>
+        <div class="aume">
+            <h2>Realidad Aumentada</h2>
+        </div>
+    </div>
+
+    <div class="descripcion-container">
+        <div class="desc-container">
             <p>
                 <script>document.write(localStorage.getItem('des'));</script>
             </p>
         </div>
+        <div class="realidad" >
+            <div id="qrcode"></div>
+            <div class="hiro-container">
+                <img class="hiro" src="" alt="">
+            </div>
+        </div>
     </div>
 
-        <script src="../js/javascript.js"></script>
+    <div class="titulos">
+        <div>
+            <h2 class="name">
+                <script>document.write(localStorage.getItem('titulo'));</script>
+            </h2>
+        </div>
+        <div>
+            <h2 class="name-ubi">Ubicacion</h2>
+        </div>
+    </div>
+
+    <div class="zna">
+        <div class="ig-container">
+            <img class="ig" src="" alt="">
+        </div>
+        <div class="ubi-container">
+            <img class="ubi" src="" alt="">
+        </div>
+    </div>
+
+    <script>
+        // obtengo el hor del localstorage de la funcion
+        var hiroURL = localStorage.getItem('hiro');
+        // si si existe un url me coloca en donde encuentre la clase hiro
+        if (hiroURL) {
+            var hiroImage = document.querySelector('.hiro');
+            hiroImage.src = hiroURL;
+        }
+        var ig = localStorage.getItem('imagenSrc');
+        if (ig) {
+            var Img = document.querySelector('.ig');
+            Img.src = ig;
+        }
+        var ubicacion = localStorage.getItem('ubicacion');
+        if (ubicacion) {
+            var ubi = document.querySelector('.ubi');
+            ubi.src = ubicacion;
+        }
+    </script>
+    <script>
+        var qrcode = new QRCode(document.getElementById("qrcode"), {
+            text: "https://fn23z8rj-5500.use2.devtunnels.ms/camera.html",
+            width: 128,
+            height: 128
+        });
+    </script>
+
+    <script src="../js/javascript.js"></script>
 </body>
 
-<footer class="footers">
+<footer class="footer">
     <p>&copy; 2023 Gonzalez Olivares Luis Daniel</p>
 </footer>
 
